@@ -14,7 +14,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self tap_swizzleSelector:@selector(viewWillAppear:) withSelector:@selector(tap_viewWillAppear:)];
-        [self tap_swizzleSelector:@selector(viewDidDisappear:) withSelector:@selector(tap_viewDidDisappear:)];
+        [self tap_swizzleSelector:@selector(viewWillDisappear:) withSelector:@selector(tap_viewWillDisappear:)];
         [self tap_swizzleSelector:@selector(beginAppearanceTransition:animated:) withSelector:@selector(tap_beginAppearanceTransition:animated:)];
     });
 }
@@ -63,9 +63,9 @@
     [self tap_viewWillAppear:animated];
 }
 
-- (void)tap_viewDidDisappear:(BOOL)animated
+- (void)tap_viewWillDisappear:(BOOL)animated
 {
-    [self tap_viewDidDisappear:animated];
+    [self tap_viewWillDisappear:animated];
 
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver:self name:UITextFieldTextDidBeginEditingNotification object:nil];
