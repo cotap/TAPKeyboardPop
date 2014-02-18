@@ -1,5 +1,11 @@
 # TAPKeyboardPop
 
+For an in depth overview, see the [blog post on the Cotap blog](http://engineering.cotap.com/post/77006076500/animating-the-keyboard-with-the-ios7-interactive-pop)
+
+In short, animated keyboard dismissal, just like iMessage:
+
+![Example Screenshot](https://raw.github.com/cotap/TAPKeyboardPop/master/Screenshots/example.png)
+
 ## Installation
 
 TAPKeyboardPop is available through [CocoaPods](http://cocoapods.org),
@@ -21,7 +27,7 @@ be interactively popped:
 
 ## Author
 
-[Dave Lyon] (http://davelyon.net/)
+[Dave Lyon] (http://davelyon.net/) - [@daveisonthego](https://twitter.com/daveisonthego)
 
 ## Contributors
 
