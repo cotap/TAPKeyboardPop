@@ -3,7 +3,7 @@
 
 @interface UIViewController ()
 
-@property (nonatomic, weak) UIResponder *tap_previousResponder;
+@property (nonatomic, strong) UIResponder *tap_previousResponder;
 
 @end
 
@@ -51,7 +51,13 @@
     [self.transitionCoordinator animateAlongsideTransitionInView:keyboardView animation:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         CGRect endFrame = CGRectOffset(keyboardView.frame, CGRectGetWidth(keyboardView.frame), 0);
         keyboardView.frame = endFrame;
-    } completion:NULL];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        if ([context isCancelled]) {
+            return;
+        }
+        [self.tap_previousResponder resignFirstResponder];
+        self.tap_previousResponder = nil;
+    }];
 }
 
 - (void)tap_viewWillAppear:(BOOL)animated
@@ -88,7 +94,7 @@
 
 - (void)setTap_previousResponder:(UIResponder *)responder
 {
-    objc_setAssociatedObject(self, @selector(tap_previousResponder), responder, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(tap_previousResponder), responder, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
