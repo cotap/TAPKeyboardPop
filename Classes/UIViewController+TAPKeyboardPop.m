@@ -11,12 +11,14 @@
 
 + (void)load
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self tap_swizzleSelector:@selector(viewWillAppear:) withSelector:@selector(tap_viewWillAppear:)];
-        [self tap_swizzleSelector:@selector(viewWillDisappear:) withSelector:@selector(tap_viewWillDisappear:)];
-        [self tap_swizzleSelector:@selector(beginAppearanceTransition:animated:) withSelector:@selector(tap_beginAppearanceTransition:animated:)];
-    });
+    if ([[UIViewController new] respondsToSelector:@selector(transitionCoordinator)]) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [self tap_swizzleSelector:@selector(viewWillAppear:) withSelector:@selector(tap_viewWillAppear:)];
+            [self tap_swizzleSelector:@selector(viewWillDisappear:) withSelector:@selector(tap_viewWillDisappear:)];
+            [self tap_swizzleSelector:@selector(beginAppearanceTransition:animated:) withSelector:@selector(tap_beginAppearanceTransition:animated:)];
+        });
+    }
 }
 
 + (void)tap_swizzleSelector:(SEL)originalSelector withSelector:(SEL)swizzledSelector

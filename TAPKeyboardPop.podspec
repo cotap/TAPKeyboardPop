@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "Cotap" => "http://cotap.com", "Dave Lyon" => "dave@davelyon.net" }
   s.source       = { :git => "https://github.com/cotap/TAPKeyboardPop.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
   s.source_files = 'Classes/*'
