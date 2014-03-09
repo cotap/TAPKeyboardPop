@@ -11,7 +11,7 @@
 
 - (IBAction)endEditing:(id)sender
 {
-    [self.view endEditing:sender];
+    [self.view endEditing:YES];
 }
 
 @end
