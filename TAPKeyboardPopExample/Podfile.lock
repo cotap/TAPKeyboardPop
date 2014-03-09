@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../TAPKeyboardPop.podspec
 
 SPEC CHECKSUMS:
-  TAPKeyboardPop: cd6d6d4082879e1af23d6c13b102af0bc9910b31
+  TAPKeyboardPop: 98438823d72213305ac664f60c48970da20db6ec
 
 COCOAPODS: 0.29.0

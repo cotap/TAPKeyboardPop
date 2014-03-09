@@ -11,7 +11,7 @@
 
 + (void)load
 {
-    if ([UIViewController instancesRespondToSelector:@selector(transitionCoordinator)]) {
+    if ([self instancesRespondToSelector:@selector(transitionCoordinator)]) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             [self tap_swizzleSelector:@selector(viewWillAppear:) withSelector:@selector(tap_viewWillAppear:)];
