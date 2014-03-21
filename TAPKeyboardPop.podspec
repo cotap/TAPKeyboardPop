@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TAPKeyboardPop"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "A UIViewController category that enables animated keyboard dismissal with the pop gesture."
   s.homepage     = "https://github.com/cotap/TAPKeyboardPop"
   s.license      = 'MIT'
