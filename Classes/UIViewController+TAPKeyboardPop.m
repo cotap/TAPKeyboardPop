@@ -51,7 +51,9 @@
 
     [self.tap_previousResponder becomeFirstResponder];
     [self.transitionCoordinator animateAlongsideTransitionInView:keyboardView animation:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-        CGRect endFrame = CGRectOffset(keyboardView.frame, CGRectGetWidth(keyboardView.frame), 0);
+        UIView* fromView = [[context viewControllerForKey:UITransitionContextFromViewControllerKey] view];
+        CGRect endFrame = keyboardView.frame;
+        endFrame.origin.x = fromView.frame.origin.x;
         keyboardView.frame = endFrame;
     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         if ([context isCancelled]) {
