@@ -1,4 +1,4 @@
 
 target "TAPKeyboardPopExample" do
-	pod "TAPKeyboardPop", :path => "../TAPKeyboardPop.podspec"
+	pod "TAPKeyboardPop", :path => "../"
 end

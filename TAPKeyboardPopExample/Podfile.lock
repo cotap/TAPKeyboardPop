@@ -1,14 +1,14 @@
 PODS:
-  - TAPKeyboardPop (0.1.0)
+  - TAPKeyboardPop (0.1.1)
 
 DEPENDENCIES:
-  - TAPKeyboardPop (from `../TAPKeyboardPop.podspec`)
+  - TAPKeyboardPop (from `../`)
 
 EXTERNAL SOURCES:
   TAPKeyboardPop:
-    :path: ../TAPKeyboardPop.podspec
+    :path: ../
 
 SPEC CHECKSUMS:
-  TAPKeyboardPop: 98438823d72213305ac664f60c48970da20db6ec
+  TAPKeyboardPop: f700411e02ea5a0d01fec416bc5aa9ef7b73bbb4
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
