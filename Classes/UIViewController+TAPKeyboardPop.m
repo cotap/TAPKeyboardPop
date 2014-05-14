@@ -46,9 +46,12 @@
 
     UIView *keyboardView = self.tap_previousResponder.inputAccessoryView.superview;
     if (!keyboardView) {
-        keyboardView = [self findKeyboard];
+        [self.tap_previousResponder becomeFirstResponder];
+        keyboardView = self.tap_previousResponder.inputAccessoryView.superview;
         if (!keyboardView) {
             return;
+        } else {
+            [self.tap_previousResponder resignFirstResponder];
         }
     }
 
@@ -102,17 +105,6 @@
 - (void)setTap_previousResponder:(UIResponder *)responder
 {
     objc_setAssociatedObject(self, @selector(tap_previousResponder), responder, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIView *)findKeyboard {
-    for (UIWindow *window in [UIApplication sharedApplication].windows) {
-        for (UIView *possibleKeyboard in window.subviews) {
-            if ([[possibleKeyboard description] hasPrefix:@"<UIPeripheralHostView"]) {
-                return possibleKeyboard;
-            }
-        }
-    }
-    return nil;
 }
 
 @end
