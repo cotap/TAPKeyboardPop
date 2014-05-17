@@ -1,5 +1,6 @@
 #import "TAPRootViewController.h"
-#import "TAPKeyboardViewController.h"
+#import "TAPTextFieldViewController.h"
+#import "TAPTextViewViewController.h"
 
 @interface TAPRootViewController ()
 
@@ -7,32 +8,18 @@
 
 @implementation TAPRootViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (IBAction)tappedTextFieldButton:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    TAPTextFieldViewController *vc = [[TAPTextFieldViewController alloc] initWithNibName:@"TAPTextFieldViewController" bundle:nil];
+    vc.title = @"View with UITextField";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)viewDidLoad
+- (IBAction)tappedTextViewButton:(id)sender
 {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-#pragma - IBActions
-
-- (IBAction)tappedMoveForwardButton:(id)sender
-{
-    TAPKeyboardViewController *keyboardViewController = [[TAPKeyboardViewController alloc] initWithNibName:@"TAPKeyboardViewController" bundle:nil];
-    keyboardViewController.title = @"View with keyboard";
-    [self.navigationController pushViewController:keyboardViewController animated:YES];
+    TAPTextViewViewController *vc = [[TAPTextViewViewController alloc] initWithNibName:@"TAPTextViewViewController" bundle:nil];
+    vc.title = @"View with UITextView";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

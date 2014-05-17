@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TAPRootViewController : UIViewController
-- (IBAction)tappedMoveForwardButton:(id)sender;
+- (IBAction)tappedTextFieldButton:(id)sender;
+- (IBAction)tappedTextViewButton:(id)sender;
 @end

@@ -1,13 +1,13 @@
-#import "TAPKeyboardViewController.h"
+#import "TAPTextFieldViewController.h"
 #import "UIViewController+TAPKeyboardPop.h"
 
-@interface TAPKeyboardViewController () <UITextViewDelegate>
+@interface TAPTextFieldViewController () <UITextViewDelegate>
 
 @property(nonatomic, retain) IBOutlet UITextField *textField;
 
 @end
 
-@implementation TAPKeyboardViewController
+@implementation TAPTextFieldViewController
 
 - (IBAction)endEditing:(id)sender
 {

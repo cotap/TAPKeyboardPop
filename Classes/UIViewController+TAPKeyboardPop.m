@@ -46,7 +46,13 @@
 
     UIView *keyboardView = self.tap_previousResponder.inputAccessoryView.superview;
     if (!keyboardView) {
-        return;
+        [self.tap_previousResponder becomeFirstResponder];
+        keyboardView = self.tap_previousResponder.inputAccessoryView.superview;
+        if (!keyboardView) {
+            return;
+        } else {
+            [self.tap_previousResponder resignFirstResponder];
+        }
     }
 
     [self.tap_previousResponder becomeFirstResponder];

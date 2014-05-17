@@ -19,8 +19,10 @@
 		D5AC5FB1189EE87000AF551F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC5F99189EE87000AF551F /* UIKit.framework */; };
 		D5AC5FC7189EE9BF00AF551F /* TAPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AC5FC5189EE9BF00AF551F /* TAPRootViewController.m */; };
 		D5AC5FC8189EE9BF00AF551F /* TAPRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AC5FC6189EE9BF00AF551F /* TAPRootViewController.xib */; };
-		D5AC5FCC189EEC1300AF551F /* TAPKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AC5FCA189EEC1300AF551F /* TAPKeyboardViewController.m */; };
-		D5AC5FCD189EEC1300AF551F /* TAPKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AC5FCB189EEC1300AF551F /* TAPKeyboardViewController.xib */; };
+		D5AC5FCC189EEC1300AF551F /* TAPTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AC5FCA189EEC1300AF551F /* TAPTextFieldViewController.m */; };
+		D5AC5FCD189EEC1300AF551F /* TAPTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AC5FCB189EEC1300AF551F /* TAPTextFieldViewController.xib */; };
+		E82755E019098ABE00DFE8F6 /* TAPTextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82755DE19098ABE00DFE8F6 /* TAPTextViewViewController.m */; };
+		E82755E119098ABE00DFE8F6 /* TAPTextViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82755DF19098ABE00DFE8F6 /* TAPTextViewViewController.xib */; };
 		FA21134B472346ACAF81A0CC /* libPods-TAPKeyboardPopExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A964E8B0676148A78736C3C3 /* libPods-TAPKeyboardPopExample.a */; };
 /* End PBXBuildFile section */
 
@@ -53,9 +55,12 @@
 		D5AC5FC4189EE9BF00AF551F /* TAPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPRootViewController.h; sourceTree = "<group>"; };
 		D5AC5FC5189EE9BF00AF551F /* TAPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPRootViewController.m; sourceTree = "<group>"; };
 		D5AC5FC6189EE9BF00AF551F /* TAPRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPRootViewController.xib; sourceTree = "<group>"; };
-		D5AC5FC9189EEC1300AF551F /* TAPKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPKeyboardViewController.h; sourceTree = "<group>"; };
-		D5AC5FCA189EEC1300AF551F /* TAPKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPKeyboardViewController.m; sourceTree = "<group>"; };
-		D5AC5FCB189EEC1300AF551F /* TAPKeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPKeyboardViewController.xib; sourceTree = "<group>"; };
+		D5AC5FC9189EEC1300AF551F /* TAPTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPTextFieldViewController.h; sourceTree = "<group>"; };
+		D5AC5FCA189EEC1300AF551F /* TAPTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPTextFieldViewController.m; sourceTree = "<group>"; };
+		D5AC5FCB189EEC1300AF551F /* TAPTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPTextFieldViewController.xib; sourceTree = "<group>"; };
+		E82755DD19098ABE00DFE8F6 /* TAPTextViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPTextViewViewController.h; sourceTree = "<group>"; };
+		E82755DE19098ABE00DFE8F6 /* TAPTextViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPTextViewViewController.m; sourceTree = "<group>"; };
+		E82755DF19098ABE00DFE8F6 /* TAPTextViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPTextViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +124,12 @@
 			children = (
 				D5AC5FA4189EE87000AF551F /* TAPAppDelegate.h */,
 				D5AC5FA5189EE87000AF551F /* TAPAppDelegate.m */,
-				D5AC5FC9189EEC1300AF551F /* TAPKeyboardViewController.h */,
-				D5AC5FCA189EEC1300AF551F /* TAPKeyboardViewController.m */,
-				D5AC5FCB189EEC1300AF551F /* TAPKeyboardViewController.xib */,
+				D5AC5FC9189EEC1300AF551F /* TAPTextFieldViewController.h */,
+				D5AC5FCA189EEC1300AF551F /* TAPTextFieldViewController.m */,
+				D5AC5FCB189EEC1300AF551F /* TAPTextFieldViewController.xib */,
+				E82755DD19098ABE00DFE8F6 /* TAPTextViewViewController.h */,
+				E82755DE19098ABE00DFE8F6 /* TAPTextViewViewController.m */,
+				E82755DF19098ABE00DFE8F6 /* TAPTextViewViewController.xib */,
 				D5AC5FC4189EE9BF00AF551F /* TAPRootViewController.h */,
 				D5AC5FC5189EE9BF00AF551F /* TAPRootViewController.m */,
 				D5AC5FC6189EE9BF00AF551F /* TAPRootViewController.xib */,
@@ -220,7 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AC5FCD189EEC1300AF551F /* TAPKeyboardViewController.xib in Resources */,
+				D5AC5FCD189EEC1300AF551F /* TAPTextFieldViewController.xib in Resources */,
+				E82755E119098ABE00DFE8F6 /* TAPTextViewViewController.xib in Resources */,
 				D5AC5FC8189EE9BF00AF551F /* TAPRootViewController.xib in Resources */,
 				D5AC5FA0189EE87000AF551F /* InfoPlist.strings in Resources */,
 				D5AC5FA8189EE87000AF551F /* Images.xcassets in Resources */,
@@ -274,10 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AC5FCC189EEC1300AF551F /* TAPKeyboardViewController.m in Sources */,
+				D5AC5FCC189EEC1300AF551F /* TAPTextFieldViewController.m in Sources */,
 				D5AC5FC7189EE9BF00AF551F /* TAPRootViewController.m in Sources */,
 				D5AC5FA2189EE87000AF551F /* main.m in Sources */,
 				D5AC5FA6189EE87000AF551F /* TAPAppDelegate.m in Sources */,
+				E82755E019098ABE00DFE8F6 /* TAPTextViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
