@@ -12,7 +12,7 @@ TAPKeyboardPop is available through [CocoaPods](http://cocoapods.org),
 to install it simply add the following line to your Podfile:
 
 ``` ruby
-pod 'TAPKeyboardPop', '~> 0.1.1'
+pod 'TAPKeyboardPop', '~> 0.1.2'
 ```
 
 ## Usage
