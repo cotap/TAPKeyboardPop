@@ -40,7 +40,7 @@
 {
     [self tap_beginAppearanceTransition:isAppearing animated:animated];
 
-    if (isAppearing || !animated) {
+    if (isAppearing || !animated || self.tap_previousResponder == nil) {
         return;
     }
 
@@ -76,6 +76,10 @@
     [center addObserver:self selector:@selector(tap_didBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
     [center addObserver:self selector:@selector(tap_didBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
 
+    // When the keyboard is dismissed, we need to remove our hooks from it so that we don't accidentally re-set
+    // the first responder if an interactive transition is canceled.
+    [center addObserver:self selector:@selector(tap_didEndEditing:) name:UIKeyboardDidHideNotification object:nil];
+
     [self tap_viewWillAppear:animated];
 }
 
@@ -86,6 +90,8 @@
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver:self name:UITextFieldTextDidBeginEditingNotification object:nil];
     [center removeObserver:self name:UITextViewTextDidBeginEditingNotification object:nil];
+
+    [center removeObserver:self name:UIKeyboardDidHideNotification object:nil];
 }
 
 - (void)tap_didBeginEditing:(NSNotification *)note
@@ -96,6 +102,12 @@
         [firstResponder performSelector:@selector(setInputAccessoryView:) withObject:[UIView new]];
     }
 }
+
+- (void)tap_didEndEditing:(NSNotification *)note
+{
+    self.tap_previousResponder = nil;
+}
+
 
 - (UIResponder *)tap_previousResponder
 {
