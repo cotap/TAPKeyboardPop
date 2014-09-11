@@ -44,6 +44,9 @@
         return;
     }
 
+    if (![self.transitionCoordinator isInteractive]) {
+        return;
+    }
     UIView *keyboardView = self.tap_previousResponder.inputAccessoryView.superview;
     if (!keyboardView) {
         [self.tap_previousResponder becomeFirstResponder];
