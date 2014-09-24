@@ -40,7 +40,9 @@
 {
     [self tap_beginAppearanceTransition:isAppearing animated:animated];
 
-    if (isAppearing || !animated || self.tap_previousResponder == nil) {
+    if (isAppearing ||
+        self.tap_previousResponder == nil ||
+        self.transitionCoordinator.initiallyInteractive == NO) {
         return;
     }
 
